@@ -1,0 +1,60 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="tabLayoutStyle" parent="TextAppearance.AppCompat.Button">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/color_8f8e94</item>
+        <!--字体小写-->
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="titleBarStyle">
+        <item name="android:textSize">@dimen/dp_16</item>
+        <item name="android:textColor">@color/black</item>
+        <!--字体小写-->
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <!-- 视频封面 -->
+    <declare-styleable name="VideoImageView">
+        <!-- 比例 -->
+        <attr name="vimg_ratio" format="float" />
+        <!-- 宽度偏差 -->
+        <attr name="vimg_woffset" format="integer" />
+    </declare-styleable>
+
+    <declare-styleable name="TitleBar">
+
+        <attr name="bottomTextVisible" format="boolean" />
+        <attr name="bottomText" format="reference|string" />
+        <attr name="bottomTextColor" format="reference" />
+        <attr name="leftText" format="reference|string" />
+        <attr name="middleText" format="reference|string" />
+        <attr name="rightText" format="reference|string" />
+        <attr name="rightVisible" format="boolean" />
+        <attr name="leftVisible" format="boolean" />
+        <attr name="showStatusBar" format="boolean" />
+        <attr name="leftIcon" format="reference" />
+        <attr name="rightIcon" format="reference" />
+        <attr name="middleTextColor" format="reference" />
+        <attr name="rightTextColor" format="reference" />
+        <attr name="leftTextColor" format="reference" />
+        <attr name="leftTextSize" format="reference" />
+        <attr name="rightTextSize" format="dimension" />
+        <attr name="leftTextBold" format="boolean" />
+        <attr name="middleTextBold" format="boolean" />
+        <attr name="rightTextBold" format="boolean" />
+        <attr name="background" format="reference" />
+        <attr name="middleTextVisible" format="boolean" />
+        <attr name="rightIconVisible" format="boolean" />
+        <attr name="showDividerLine" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="EmptyDataView">
+        <!-- 背景颜色 -->
+        <attr name="bg_color" format="color" />
+        <attr name="emptyImage" format="reference" />
+        <attr name="emptyText" format="string" />
+        <!-- 下边距 -->
+        <attr name="emptyPaddingBottom" format="dimension" />
+    </declare-styleable>
+</resources>

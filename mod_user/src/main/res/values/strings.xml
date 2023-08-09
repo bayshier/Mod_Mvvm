@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="mine_collect">我的收藏</string>
+    <string name="mine_setting">设置</string>
+
+    <string name="setting_user_info">个人信息</string>
+    <string name="setting_account_safe">账户与安全</string>
+    <string name="setting_newest_version">已是最新版</string>
+    <string name="setting_clear_cache">清除缓存</string>
+    <string name="setting_current_version">当前版本V%s</string>
+    <string name="setting_logout">退出</string>
+    <string name="setting_info_about">关于</string>
+    <string name="setting_confirm_logout">确认退出当前登录？</string>
+    <string name="setting_clear_cache_tips">是否清除手机缓存？</string>
+
+    <string name="user_info_head">头像</string>
+    <string name="user_info_name">昵称</string>
+    <string name="user_info_phone">手机</string>
+    <string name="user_info_input_name">输入用户名称</string>
+    <string name="user_info_sex">性别</string>
+    <string name="user_sex_boy">男</string>
+    <string name="user_sex_girl">女</string>
+    <string name="user_info_birthday">生日</string>
+    <string name="user_info_input_birthday">点击设置生日</string>
+    <string name="user_info_signature">签名</string>
+    <string name="user_info_input_signature">请输入您的个性签名</string>
+    <string name="user_pictures">拍照</string>
+    <string name="user_album">我的相册</string>
+
+    <string name="about_us">关于我们</string>
+    <string name="about_main_link">我的主页</string>
+    <string name="about_github">我的github</string>
+    <string name="about_wechat">微信号</string>
+    <string name="about_project">Mod是一个基于 组件化+模块化+Kotlin+协程+Flow+Retrofit+Jetpack+MVVM+短视频 架构实现的 WanAndroid 客户端。 能提供大家学习如何从0到1打造一个符合大型项目的架构模式。大部分使用到 Android Jetpack 中的组件， 项目中提供如何使用和巩固对 Kotlin+Jetpack+协程 等知识的学习，并有详细的注释。能给大家提供一些想法和思考。 项目编码符合符合阿里巴巴 Java 开发规范和阿里巴巴 Android 开发规范。</string>
+
+    <string name="collect_my">我的收藏</string>
+</resources>

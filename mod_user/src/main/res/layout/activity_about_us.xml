@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_f0f2f4">
+
+        <com.common.view.TitleBar
+            android:id="@+id/title_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:middleText="@string/about_us" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_main_link"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="@dimen/dp_8"
+            android:background="@color/white"
+            android:paddingStart="@dimen/dp_14"
+            android:paddingEnd="@dimen/dp_8"
+            app:layout_constraintTop_toBottomOf="@+id/title_bar">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_main_link_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:paddingTop="@dimen/dp_10"
+                android:paddingBottom="@dimen/dp_10"
+                android:text="@string/about_main_link"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_15"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_main_link"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:drawableRight="@mipmap/ic_next"
+                android:drawablePadding="@dimen/dp_6"
+                android:gravity="center|end"
+                android:paddingTop="@dimen/dp_10"
+                android:paddingBottom="@dimen/dp_10"
+                android:textColor="@color/color_0165b8"
+                android:textSize="@dimen/text_size_11"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/tv_main_link_title"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_github"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="@dimen/dp_1"
+            android:background="@color/white"
+            android:paddingStart="@dimen/dp_14"
+            android:paddingEnd="@dimen/dp_8"
+            app:layout_constraintTop_toBottomOf="@+id/cl_main_link">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_github_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:paddingTop="@dimen/dp_10"
+                android:paddingBottom="@dimen/dp_10"
+                android:text="@string/about_github"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_15"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_github"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:drawableRight="@mipmap/ic_next"
+                android:drawablePadding="@dimen/dp_6"
+                android:gravity="center_vertical|end"
+                android:paddingTop="@dimen/dp_10"
+                android:paddingBottom="@dimen/dp_10"
+                android:textColor="@color/color_0165b8"
+                android:textSize="@dimen/text_size_11"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/tv_github_title"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_about_project"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp_12"
+            android:gravity="center_vertical"
+            android:paddingTop="@dimen/dp_10"
+            android:paddingBottom="@dimen/dp_10"
+            android:text="@string/about_project"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_12"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cl_github" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

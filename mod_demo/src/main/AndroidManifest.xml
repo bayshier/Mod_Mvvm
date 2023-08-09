@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        package="com.sum.demo">
+
+    <application>
+        <activity
+                android:name="com.demo.navigation.DemoNavigationActivity"
+                android:theme="@style/Theme.BaseTheme" />
+        <activity
+                android:name="com.demo.navigation.NavActivity"
+                android:theme="@style/Theme.BaseTheme" />
+        <activity
+                android:name="com.demo.lifecycle.DemoLifecycleActivity"
+                android:theme="@style/Theme.BaseTheme" />
+        <activity
+                android:name="com.demo.viewmodel.DemoViewModelActivity"
+                android:theme="@style/Theme.BaseTheme" />
+        <activity
+                android:name="com.demo.livedata.DemoLiveDataActivity"
+                android:theme="@style/Theme.BaseTheme" />
+    </application>
+
+</manifest>

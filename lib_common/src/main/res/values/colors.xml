@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#3F51B5</color>
+    <color name="purple_500">#303F9F</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="transparent">#00000000</color>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#D81B60</color>
+
+    <color name="color_0165b8">#0165B8</color>
+    <color name="color_b8cfe6">#B8CFE6</color>
+    <color name="color_f2af00">#F2AF00</color>
+    <color name="color_b2d0e9">#B2D0E9</color>
+    <color name="color_0159a5">#0159A5</color>
+    <color name="color_4f5356">#4F5356</color>
+    <color name="color_8f8e94">#8F8E94</color>
+    <color name="color_979797">#979797</color>
+    <color name="color_f3f7f8">#F3F7F8</color>
+
+    <color name="color_translucence">#90000000</color>
+    <color name="color_222427">#222427</color>
+    <color name="color_898e92">#898e92</color>
+    <color name="color_f0f2f4">#F0F2F4</color>
+    <color name="color_acb1b6">#acb1b6</color>
+    <color name="color_dce0e4">#dce0e4</color>
+    <color name="color_550165b8">#550165b8</color>
+
+    <color name="line_color">#dce0e4</color>
+
+    <color name="dialog_bg">#ffffff</color>
+    <color name="dialog_bg_press">#f0f0f0</color>
+    <color name="dialog_cancel">#323233</color>
+    <color name="dialog_confirm">#007ac9</color>
+</resources>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/mobile_navigation"
+        app:startDestination="@+id/navi_home">
+
+    <sumFragment
+            android:id="@+id/navi_home"
+            android:name="com.main.ui.home.HomeFragment"
+            android:label="@string/tab_home"
+            tools:layout="@layout/fragment_home" />
+
+    <sumFragment
+            android:id="@+id/navi_category"
+            android:name="com.main.ui.category.CategoryFragment"
+            android:label="@string/tab_categories"
+            tools:layout="@layout/fragment_category" />
+
+    <sumFragment
+            android:id="@+id/navi_system"
+            android:name="com.main.ui.system.SystemFragment"
+            android:label="@string/tab_system"
+            tools:layout="@layout/fragment_system" />
+
+    <sumFragment
+            android:id="@+id/navi_mine"
+            android:name="com.main.ui.mine.MineFragment"
+            android:label="@string/tab_mine"
+            tools:layout="@layout/fragment_mine" />
+</navigation>

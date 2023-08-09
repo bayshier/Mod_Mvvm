@@ -1,0 +1,145 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+    id 'kotlin-kapt'
+}
+
+android {
+    signingConfigs {
+        debug {
+            storeFile file('../Mod.jks')
+            storePassword '123456'
+            keyAlias 'Mod'
+            keyPassword '123456'
+        }
+        release {
+            storeFile file('../Mod.jks')
+            storePassword '123456'
+            keyAlias 'Mod'
+            keyPassword '123456'
+        }
+    }
+    compileSdk rootProject.android.compileSdk
+
+    defaultConfig {
+        applicationId rootProject.android.applicationId
+        minSdk rootProject.android.minSdk
+        targetSdk rootProject.android.targetSdk
+        versionCode rootProject.android.versionCode
+        versionName rootProject.android.versionName
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+//        ndk {
+//            abiFilters "armeabi-v7a"
+//            abiFilters "arm64-v8a"
+////            abiFilters "x86"
+//        }
+//        externalNativeBuild {
+//            cmake {
+//                arguments "-DANDROID_STL=c++_shared"
+//            }
+//        }
+        //ARouter
+//        javaCompileOptions {
+//            annotationProcessorOptions {
+//                arguments = [AROUTER_MODULE_NAME: project.getName()]
+//            }
+//        }
+        kapt {
+            arguments {
+                arg("AROUTER_MODULE_NAME", project.getName())
+            }
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+    buildFeatures {
+        dataBinding = true
+        viewBinding = true
+    }
+
+    //Room官方建议：在`android`块中添加以下代码块，以从软件包中排除原子函数模块并防止出现警告
+    packagingOptions {
+        exclude 'META-INF/atomicfu.kotlin_module'
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation rootProject.depsLibs.coreKtx
+    implementation rootProject.depsLibs.appcompat
+    implementation rootProject.depsLibs.material
+    implementation rootProject.depsLibs.constraintlayout
+    implementation rootProject.depsLibs.liveDataKtx
+    implementation rootProject.depsLibs.viewModelKtx
+    implementation rootProject.depsLibs.navigationFragment
+    implementation rootProject.depsLibs.navigationUI
+    implementation rootProject.depsLibs.lifecycleCommon
+
+    implementation rootProject.depsLibs.roomKtx
+    kapt rootProject.depsLibs.roomCompiler
+
+    testImplementation rootProject.depsLibs.junit
+    androidTestImplementation rootProject.depsLibs.extJunit
+    androidTestImplementation rootProject.depsLibs.espressoCore
+
+    implementation rootProject.depsLibs.multidex
+
+    implementation rootProject.depsLibs.retrofit2
+    implementation rootProject.depsLibs.retrofit2Gson
+    implementation rootProject.depsLibs.loggingInterceptor
+
+    implementation rootProject.depsLibs.gson
+
+//    implementation rootProject.depsLibs.xlog
+
+    implementation rootProject.depsLibs.mmkv
+
+    implementation rootProject.depsLibs.refreshLayout
+    implementation rootProject.depsLibs.refreshHeader
+    implementation rootProject.depsLibs.refreshFooter
+
+    implementation rootProject.depsLibs.glide
+    kapt rootProject.depsLibs.glideCompiler
+
+    implementation rootProject.depsLibs.flexbox
+
+    implementation rootProject.depsLibs.aroutreApi
+    kapt rootProject.depsLibs.arouterCompiler
+
+    implementation rootProject.depsLibs.tbssdk
+    implementation rootProject.depsLibs.exoPlayer
+
+//    implementation rootProject.depsLibs.cameraX
+
+    implementation rootProject.depsLibs.rxPermission
+    implementation rootProject.depsLibs.rxjava
+    implementation rootProject.depsLibs.rxandroid
+
+    implementation project(path: ':mod_main')
+    implementation project(path: ':mod_user')
+    implementation project(path: ':mod_login')
+    implementation project(path: ':mod_search')
+    implementation project(path: ':mod_video')
+    implementation project(path: ':mod_demo')
+    implementation project(path: ':lib_framework')
+    implementation project(path: ':lib_network')
+    implementation project(path: ':lib_common')
+    implementation project(path: ':lib_stater')
+    implementation project(path: ':lib_banner')
+    implementation project(path: ':lib_glide')
+    implementation project(path: ':lib_room')
+}

@@ -1,0 +1,31 @@
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        google()
+        mavenCentral()
+        maven { url 'https://jitpack.io' }
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+        maven { url 'https://jitpack.io' }
+    }
+}
+rootProject.name = "Mod_Android"
+include ':app'
+include ':mod_main'
+include ':mod_user'
+include ':mod_login'
+include ':mod_search'
+include ':mod_video'
+include ':lib_framework'
+include ':lib_common'
+include ':lib_network'
+include ':lib_stater'
+include ':lib_banner'
+include ':lib_glide'
+include ':lib_room'
+include ':mod_demo'

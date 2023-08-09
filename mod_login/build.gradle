@@ -1,0 +1,88 @@
+plugins {
+    id 'com.android.library'
+    id 'org.jetbrains.kotlin.android'
+    id 'kotlin-kapt'
+}
+// 组件模式和基础模式切换
+//def root = rootProject.ext
+//if (root.isModule) {
+//    apply plugin: 'com.android.application'
+//} else {
+//    apply plugin: 'com.android.library'
+//}
+
+android {
+    compileSdk rootProject.android.compileSdk
+
+    defaultConfig {
+        minSdk rootProject.android.minSdk
+        targetSdk rootProject.android.targetSdk
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        
+
+        //ARouter
+        kapt {
+            arguments {
+                arg("AROUTER_MODULE_NAME", project.getName())
+            }
+        }
+    }
+//   组件化模式资源切换
+//    sourceSets {
+//        main {
+//            if (rootProject.ext.isModule) {
+//                manifest.srcFile 'src/main/debug/AndroidManifest.xml'
+//            } else {
+//                manifest.srcFile 'src/main/AndroidManifest.xml'
+//                //library模式下排除debug文件夹中的所有Java文件
+//                java {
+//                    exclude 'debug/**'
+//                }
+//            }
+//        }
+//    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+    buildFeatures {
+        dataBinding = true
+        viewBinding = true
+    }
+}
+
+dependencies {
+
+    compileOnly fileTree(dir: 'libs', include: ['*.jar'])
+    compileOnly rootProject.depsLibs.coreKtx
+    compileOnly rootProject.depsLibs.appcompat
+    compileOnly rootProject.depsLibs.material
+    compileOnly rootProject.depsLibs.constraintlayout
+    compileOnly rootProject.depsLibs.liveDataKtx
+    compileOnly rootProject.depsLibs.viewModelKtx
+
+    testCompileOnly rootProject.depsLibs.junit
+    androidTestCompileOnly rootProject.depsLibs.extJunit
+    androidTestCompileOnly rootProject.depsLibs.espressoCore
+
+    compileOnly rootProject.depsLibs.gson
+    compileOnly rootProject.depsLibs.mmkv
+
+    compileOnly rootProject.depsLibs.aroutreApi
+    kapt rootProject.depsLibs.arouterCompiler
+
+    compileOnly project(path: ':lib_framework')
+    compileOnly project(path: ':lib_common')
+    compileOnly project(path: ':lib_network')
+}
