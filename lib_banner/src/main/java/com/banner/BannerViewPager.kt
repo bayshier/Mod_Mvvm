@@ -475,7 +475,7 @@ open class BannerViewPager<T, H : BaseViewHolder<T>> @JvmOverloads constructor(
     }
 
     private fun isCanLoopSafely(): Boolean {
-        return ((mBannerManager?.getBannerOptions().isCanLoop() && ((mBannerPagerAdapter?.getListSize() ?: 0) > 1)))
+        return ((mBannerManager?.getBannerOptions()!!.isCanLoop() && ((mBannerPagerAdapter?.getListSize() ?: 0) > 1)))
     }
 
     override fun onSaveInstanceState(): Parcelable? {

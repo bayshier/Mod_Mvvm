@@ -8,7 +8,6 @@ import com.scwang.smart.refresh.layout.SmartRefreshLayout
 import com.frame.helper.AppHelper
 import com.frame.log.LogUtil
 import com.frame.manager.AppManager
-import com.mod.BuildConfig
 import com.stater.task.Task
 import com.stater.utils.DispatcherExecutor
 import com.tencent.mmkv.MMKV
@@ -29,7 +28,7 @@ class InitHelperTask(val application: Application) : Task() {
     }
 
     override fun run() {
-        AppHelper.init(application, BuildConfig.DEBUG)
+        AppHelper.init(application, true)
     }
 }
 
@@ -59,7 +58,7 @@ class InitMmkvTask() : Task() {
     override fun run() {
         val rootDir: String = MMKV.initialize(AppHelper.getApplication())
         MMKV.setLogLevel(
-            if (BuildConfig.DEBUG) {
+            if (true) {
                 MMKVLogLevel.LevelDebug
             } else {
                 MMKVLogLevel.LevelError
@@ -133,7 +132,7 @@ class InitArouterTask() : Task() {
     //执行任务，任务真正的执行逻辑
     override fun run() {
         // 这两行必须写在init之前，否则这些配置在init过程中将无效
-        if (BuildConfig.DEBUG) {
+        if (true) {
             // 开启打印日志
             ARouter.openLog()
             // 开启调试模式(如果在InstantRun模式下运行，必须开启调试模式！线上版本需要关闭,否则有安全风险)

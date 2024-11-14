@@ -12,6 +12,7 @@ plugins {
 //}
 
 android {
+    namespace = "com.sum.login"
     compileSdk rootProject.android.compileSdk
 
     defaultConfig {

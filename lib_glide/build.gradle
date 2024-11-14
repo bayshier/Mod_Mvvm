@@ -5,6 +5,7 @@ plugins {
 }
 
 android {
+    namespace = "com.sum.glide"
     compileSdk rootProject.android.compileSdk
 
     defaultConfig {

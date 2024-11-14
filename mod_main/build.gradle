@@ -5,6 +5,7 @@ plugins {
 }
 
 android {
+    namespace = "com.sum.main"
     compileSdk rootProject.android.compileSdk
 
     defaultConfig {

@@ -4,6 +4,7 @@ plugins {
 }
 
 android {
+    namespace = "com.sum.network"
     compileSdk rootProject.android.compileSdk
 
     defaultConfig {

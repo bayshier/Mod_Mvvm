@@ -105,7 +105,7 @@ object LiveDataBus {
             if (mLastVersion >= stickyLiveData.mVersion) { //如果相等则说明没有更新的数据要发送
                 //但是如果当前Observer是关系粘性事件的，则分发给他
                 if (sticky && stickyLiveData.mStickyData != null) {
-                    observer.onChanged(stickyLiveData.mStickyData)
+                    observer.onChanged(stickyLiveData.mStickyData!!)
                 }
                 return
             }

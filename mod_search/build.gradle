@@ -5,6 +5,7 @@ plugins {
 }
 
 android {
+    namespace = "com.sum.search"
     compileSdk rootProject.android.compileSdk
 
     defaultConfig {

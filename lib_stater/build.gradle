@@ -4,6 +4,7 @@ plugins {
 }
 
 android {
+    namespace = "com.sum.stater"
     compileSdk rootProject.android.compileSdk
 
     defaultConfig {

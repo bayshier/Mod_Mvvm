@@ -6,6 +6,7 @@ plugins {
 }
 
 android {
+    namespace = "com.common"
     compileSdk rootProject.android.compileSdk
 
     defaultConfig {

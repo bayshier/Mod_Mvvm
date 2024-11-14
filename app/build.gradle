@@ -5,6 +5,7 @@ plugins {
 }
 
 android {
+    namespace = "com.mod"
     signingConfigs {
         debug {
             storeFile file('../Mod.jks')
@@ -19,7 +20,7 @@ android {
             keyPassword '123456'
         }
     }
-    compileSdk rootProject.android.compileSdk
+    compileSdk 34
 
     defaultConfig {
         applicationId rootProject.android.applicationId

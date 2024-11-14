@@ -21,7 +21,7 @@ fun EditText.textChangeFlow(): Flow<String> = callbackFlow {
         override fun afterTextChanged(s: Editable?) {}
         override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
         override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
-            s?.let { offer(it.toString()) }
+            s?.let { trySend(it.toString()).isSuccess }
         }
     }
     addTextChangedListener(watcher)

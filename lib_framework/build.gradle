@@ -4,6 +4,7 @@ plugins {
 }
 
 android {
+    namespace = "com.frame"
     compileSdk rootProject.android.compileSdk
 
     defaultConfig {

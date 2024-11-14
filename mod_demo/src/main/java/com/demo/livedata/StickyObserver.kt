@@ -35,7 +35,7 @@ internal class StickyObserver<T>(
         if (mLastVersion >= mLiveData.mVersion) { //如果相等则说明没有更新的数据要发送
             //但是如果当前Observer是关系粘性事件的，则分发给他
             if (mSticky && mLiveData.mStickyData != null) {
-                mObserver.onChanged(mLiveData.mStickyData)
+                mObserver.onChanged(mLiveData.mStickyData!!)
             }
             return
         }

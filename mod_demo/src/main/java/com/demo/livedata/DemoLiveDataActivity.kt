@@ -5,8 +5,8 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MediatorLiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.Observer
-import androidx.lifecycle.Transformations
 import androidx.lifecycle.ViewModelProvider
+import androidx.lifecycle.map
 import com.alibaba.android.arouter.facade.annotation.Route
 import com.common.constant.DEMO_ACTIVITY_LIVEDATA
 import com.sum.demo.databinding.ActivityLivedataBinding
@@ -94,7 +94,7 @@ class DemoLiveDataActivity : BaseDataBindActivity<ActivityLivedataBinding>() {
         val mapLiveData = MutableLiveData<Int>()
 
         //数据转换
-        val transformLiveData: LiveData<Int> = Transformations.map(mapLiveData) { input ->
+        val transformLiveData: LiveData<Int> = mapLiveData.map { input ->
             input * 2
         }
 

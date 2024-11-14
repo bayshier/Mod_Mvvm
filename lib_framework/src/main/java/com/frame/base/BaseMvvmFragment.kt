@@ -21,7 +21,13 @@ abstract class BaseMvvmFragment<DB : ViewDataBinding, VM : ViewModel> : BaseData
     }
 
     open fun initViewModel() {
+
+
+
         val argument = (this.javaClass.genericSuperclass as ParameterizedType).actualTypeArguments
         mViewModel = ViewModelProvider(this).get(argument[1] as Class<VM>)
     }
+
+
+
 }
